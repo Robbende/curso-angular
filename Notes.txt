@@ -1,1 +1,55 @@
 Cuso angular y github
+
+# COMPONENTES
+Trozo de codigo que puede ser utilizado en diferentes partes de la aplicacion.
+
+The component encapsulate the data, html template and logic for the view. The component could be reuse at long of site.
+
+ex:
+navbar, sidebar, etc. are components
+
+each angular application start with the app component which is the main component, and the rest of the component are a tree starting after app component.
+
+
+# MODULES
+is a container or group of related components. Every angular application has at least one module (app module).
+
+ex:
+in a site of courses we could have:
+
+course module = all related component for course, like course, ranking, etc.
+messaging module = all related component for messaging
+instructor module = all related component for instructor, like instructor dashboard, etc.
+
+
+# STEPS FOR COMPONENT
+
+1 - Create a component
+	It is necesary create a class, and add an decorator component from angular, for this we need to import component from @angular/core
+
+2 - Register it in a module
+	into 'declaration' we need to add the new component to register the component to the app module
+
+3 - add an element in an HTML markup
+	the selector added in the component need to be included into the component.html
+
+
+# STEPS FOR CREAT AN ANGULAR APP
+(se requiere NPM, node package manager)
+
+1. instalar node.js
+2. instalar angular con cli = ngm install @angular/cli -g
+3. crear un projecto nuevo = ng new my-new-project
+4. correr el projecto = ng serve
+5. crear componentes = ng generate component [nombre-componente]
+
+
+# DIRECTIVAS
+Funcionalidades que son utilizadas en las vistas, para mostrar algo, para hacer condiciones, etc.
+
+ngif
+ngfor
+ngswitch
+etc...
+
+# DIRECTIVA NGIF (ngIf)
