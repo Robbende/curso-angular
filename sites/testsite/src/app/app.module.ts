@@ -14,13 +14,19 @@ import { environment } from '../environments/environment';
 
 // todo component
 import { TodoComponent } from './components/todo/todo.component';
+import { ProductsComponent } from './components/products/products.component';
+import { ProductListComponent } from './components/products/product-list/product-list.component';
+import { ProductComponent } from './components/products/product/product.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
-    TodoComponent
+    TodoComponent,
+    ProductsComponent,
+    ProductListComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
