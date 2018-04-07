@@ -38,10 +38,11 @@ instructor module = all related component for instructor, like instructor dashbo
 (se requiere NPM, node package manager)
 
 1. instalar node.js
-2. instalar angular con cli = ngm install @angular/cli -g
+2. instalar angular con cli = npm install -g @angular/cli
 3. crear un projecto nuevo = ng new my-new-project
 4. correr el projecto = ng serve
-5. crear componentes = ng generate component [nombre-componente]
+5. crear componentes = ng generate component [nombre-componente]    => (ng g c [nombre-component])
+6. crear servicios = ng generate service [nombre-servicio]			=> (ng g s [nombre-servicio])
 
 
 # DIRECTIVAS

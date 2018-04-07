@@ -4,5 +4,13 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: 'AIzaSyBdbml3qHG_Dwf_mm_97YN_9uPJuMncx-o',
+    authDomain: 'taskappdb.firebaseapp.com',
+    databaseURL: 'https://taskappdb.firebaseio.com',
+    projectId: 'taskappdb',
+    storageBucket: '',
+    messagingSenderId: '647915131360'
+  }
 };

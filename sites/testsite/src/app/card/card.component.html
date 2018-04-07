@@ -1,0 +1,14 @@
+<p>
+  card works!
+</p>
+
+<p>Card Author: {{ author }}</p>
+
+<ul>
+	<li *ngFor="let card of cardList">
+		<div class="card-c">
+			<div>Question: {{ card.question }}</div>
+			<div>Answer: {{ card.answer }}</div>
+		</div>
+	</li>
+</ul>
