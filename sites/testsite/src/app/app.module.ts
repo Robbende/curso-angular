@@ -1,22 +1,34 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
 import { AppComponent } from './app.component';
 import { CardComponent } from './card/card.component';
-import { CardService } from './card.service'
+import { CardService } from './card.service';
+
+// firebase
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+
+// environment configuration
+import { environment } from '../environments/environment';
+
+// todo component
+import { TodoComponent } from './components/todo/todo.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CardComponent
+    CardComponent,
+    TodoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule
   ],
   providers: [
-  	CardService
+    CardService
   ],
   bootstrap: [AppComponent]
 })
