@@ -18,6 +18,8 @@ import { ProductsComponent } from './components/products/products.component';
 import { ProductListComponent } from './components/products/product-list/product-list.component';
 import { ProductComponent } from './components/products/product/product.component';
 
+// services
+import { ProductService } from './services/product.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,8 @@ import { ProductComponent } from './components/products/product/product.componen
     AngularFireDatabaseModule
   ],
   providers: [
-    CardService
+    CardService,
+    ProductService
   ],
   bootstrap: [AppComponent]
 })
