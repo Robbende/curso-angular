@@ -9,7 +9,7 @@ import { Product } from '../models/product';
 export class ProductService {
 
   productList: AngularFireList<any>;
-  selectProduct: Product = new Product();
+  selectedProduct: Product = new Product();
 
   constructor(private firebase: AngularFireDatabase) {
 
@@ -19,6 +19,7 @@ export class ProductService {
   getProducts() {
     // from firebase, get a list of all elements from 'products' collection
     this.productList = this.firebase.list('products');
+    return this.productList;
   }
 
   insertProducts(product: Product) {

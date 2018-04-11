@@ -21,6 +21,12 @@ import { ProductComponent } from './components/products/product/product.componen
 // services
 import { ProductService } from './services/product.service';
 
+import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
+
+// import routing
+import { routing, appRoutingProviders } from './app.routing';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,16 +34,20 @@ import { ProductService } from './services/product.service';
     TodoComponent,
     ProductsComponent,
     ProductListComponent,
-    ProductComponent
+    ProductComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    FormsModule,
+    routing
   ],
   providers: [
     CardService,
-    ProductService
+    ProductService,
+    appRoutingProviders
   ],
   bootstrap: [AppComponent]
 })
