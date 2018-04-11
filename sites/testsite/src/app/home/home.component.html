@@ -7,3 +7,12 @@
 
   <input type="button" value="Redirect" (click)="redirect()">
 </p>
+
+
+  <input type="text" [(ngModel)]="prenda_a_guardar"><input type="button" value="Guardar" (click)="guardarPrenda()">
+
+  <ul>
+    <li *ngFor="let prenda of listado_ropa">
+      {{prenda}}
+    </li>
+  </ul>
