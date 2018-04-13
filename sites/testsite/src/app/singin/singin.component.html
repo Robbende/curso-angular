@@ -6,12 +6,18 @@
 
   <div>
     <label for="name">Name</label>
-    <input type="text" name="name" #name="ngModel" [(ngModel)]="singdata.name">
+    <input type="text" name="name" #name="ngModel" [(ngModel)]="singdata.name" required>
+    <span *ngIf="name.touched && !name.valid">
+        El nombre no es valido.
+    </span>
   </div>
 
   <div>
     <label for="lastname">LastName</label>
-    <input type="text" name="lastname" #lastname="ngModel" [(ngModel)]="singdata.lastname">
+    <input type="text" name="lastname" #lastname="ngModel" [(ngModel)]="singdata.lastname" required pattern="[a-z]+">
+    <span *ngIf="lastname.touched && !lastname.valid">
+        El apellido no es valido.
+    </span>
   </div>
   
   <div>
