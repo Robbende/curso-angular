@@ -1,0 +1,28 @@
+<p>
+  singin page!
+</p>
+
+<form #singForm="ngForm" (ngSubmit)="onSubmit()">
+
+  <div>
+    <label for="name">Name</label>
+    <input type="text" name="name" #name="ngModel" [(ngModel)]="singdata.name">
+  </div>
+
+  <div>
+    <label for="lastname">LastName</label>
+    <input type="text" name="lastname" #lastname="ngModel" [(ngModel)]="singdata.lastname">
+  </div>
+  
+  <div>
+      <label for="address">Address</label>
+      <input type="text" name="address" #address="ngModel" [(ngModel)]="singdata.address">
+    </div>
+
+  <div>
+      <label for="city">City</label>
+      <input type="text" name="city" #city="ngModel" [(ngModel)]="singdata.city">
+    </div>
+
+    <input type="submit" value="Guardar">
+</form>
