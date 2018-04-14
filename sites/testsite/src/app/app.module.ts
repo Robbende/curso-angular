@@ -20,14 +20,17 @@ import { ProductComponent } from './components/products/product/product.componen
 
 // services
 import { ProductService } from './services/product.service';
+// import { PeticionesService } from './services/peticiones.service';
 
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
+import { HttpModule } from '@angular/http';
 
 // import routing
 import { routing, appRoutingProviders } from './app.routing';
 import { SinginComponent } from './singin/singin.component';
 import { CarrosComponent } from './carros/carros.component';
+
 
 @NgModule({
   declarations: [
@@ -46,7 +49,8 @@ import { CarrosComponent } from './carros/carros.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     FormsModule,
-    routing
+    routing,
+    HttpModule
   ],
   providers: [
     CardService,

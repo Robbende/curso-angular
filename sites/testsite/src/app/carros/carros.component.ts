@@ -14,6 +14,7 @@ export class CarrosComponent implements OnInit {
 
   carros: Carro[];
   currentCarro: Carro;
+  httpCarros;
 
   constructor(private _peticionesService: PeticionesService) {
 
@@ -26,7 +27,19 @@ export class CarrosComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this._peticionesService.getPrueba());
+    // console.log(this._peticionesService.getPrueba());
+    console.log('calling ws');
+    // console.log(this._peticionesService.getCarros());
+    this._peticionesService.getCarros().subscribe(
+      result => {
+        this.httpCarros = result.carros;
+      },
+      error => {
+        let errMessage: any = <any>error;
+        console.log(errMessage);
+      }
+    );
+
   }
 
   onSubmit () {

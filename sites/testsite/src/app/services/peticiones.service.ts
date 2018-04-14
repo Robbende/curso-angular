@@ -7,12 +7,18 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class PeticionesService {
 
-  constructor() {
+  public _url: string;
 
+  constructor(private _http: Http) {
+    this._url = 'http://localhost:5000/carros';
   }
 
   getPrueba() {
     return 'Testing Service';
+  }
+
+  getCarros() {
+    return this._http.get(this._url).map(res => res.json());
   }
 
 }
