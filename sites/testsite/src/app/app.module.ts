@@ -27,6 +27,7 @@ import { HomeComponent } from './home/home.component';
 // import routing
 import { routing, appRoutingProviders } from './app.routing';
 import { SinginComponent } from './singin/singin.component';
+import { CarrosComponent } from './carros/carros.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { SinginComponent } from './singin/singin.component';
     ProductListComponent,
     ProductComponent,
     HomeComponent,
-    SinginComponent
+    SinginComponent,
+    CarrosComponent
   ],
   imports: [
     BrowserModule,

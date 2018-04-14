@@ -1,0 +1,41 @@
+<p>
+  carros works!
+</p>
+
+<form action="" #carrosform="ngForm" (ngSubmit)="onSubmit(); carrosform.reset();">
+  <div>
+    <label>Marca</label>
+    <input type="text" name="marca" #marca="ngModel" [(ngModel)]="currentCarro.marca">
+  </div>
+
+  <div>
+    <label>Modelo</label>
+    <input type="text" name="modelo" #modelo="ngModel" [(ngModel)]="currentCarro.modelo">
+  </div>
+
+  <div>
+    <label>Nombre</label>
+    <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="currentCarro.nombre" required>
+  </div>
+
+  <div>
+    <label>Year</label>
+    <input type="text" name="year" #year="ngModel" [(ngModel)]="currentCarro.year">
+  </div>
+
+  <div>
+    <label>Color</label>
+    <input type="text" name="color" #color="ngModel" [(ngModel)]="currentCarro.color">
+  </div>
+
+  <input type="submit" value="Guardar"  [disabled] = "!carrosform.form.valid">
+</form>
+
+<h2>List of Cars</h2>
+
+<ul>
+  <li *ngFor="let car of carros">
+    {{ car.nombre }}
+    {{ car.year }}
+  </li>
+</ul>
